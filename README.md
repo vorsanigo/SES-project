@@ -7,7 +7,7 @@ The aim of this work is to infer, through a classification task, the socioeconom
 
 ```
 ├── Data preparation                       <- Scripts for location inference, text pre-processing, SES assignemnt,                                           
-│   ├── add_features                          linguistic features extraction, preparation on train, dev, and test sets
+│                                             linguistic features extraction, preparation on train, dev, and test sets
 |
 ├── Analysis                               <- Scripts for preliminary statistics on data and analysis of the results
 |                                        
