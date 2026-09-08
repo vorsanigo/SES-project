@@ -6,39 +6,17 @@ The aim of this work is to infer, through a classification task, the socioeconom
 ## Structure
 
 ```
-├── Data preparation                       <- Scripts for location inference, text pre-processing, SES assignemnt, linguistic features extraction, preparation on train, dev,                                             
-│   ├── add_features                          and test sets
-│   ├── South America                              
-│   ├── US
+├── Data preparation                       <- Scripts for location inference, text pre-processing, SES assignemnt,                                           
+│   ├── add_features                          linguistic features extraction, preparation on train, dev, and test sets
+|
 ├── Analysis                               <- Scripts for preliminary statistics on data and analysis of the results
-│   ├── Choroplets                              <- Notebooks to generate choroplet maps
-│   │   ├── f_003_tweets_flux_EU.ipynb
-│   │   ├── f_003_tweets_flux_SA.ipynb
-│   │   ├── f_003_tweets_flux_US_no_WA.ipynb
-│   ├── GDP VS tweets                           <- Notebook to generate GDP per capita VS tweets per day per country
-│   │   ├── f_001_figure_GDP_tweets.ipynb                
-│   ├── Gravity model                           <- Notebooks to run gravity models and get corresponding plots
-│   │   ├── f_002_gravity model_EU_img.ipynb    
-│   │   ├── f_002_gravity model_SA_img.ipynb
-│   │   └── f_002_gravity model_US_img.ipynb
-│   ├── Network measures                        <- Notebooks to compute network measures and generate network images
-│   │   ├── EU_network_measures.ipynb
-│   │   ├── SA_network_measures.ipynb
-│   │   └── US_network_measures no wa.ipynb
-│   └── Topics                                  <- Scripts for embeddings generation, topic modeling, and generation of labels of topics
-│       ├── embeddings.py                       
-│       ├── topics.py
-|       └── labels_llm.py                                           
-├── SES classification                             <- Scripts for the SES classification: CamemBERT and LLMs (Llama and GPT)
-│   ├── main_geocoding.py
-│   ├── new_ner.py
-│   ├── nominatim_ner_geocoding.py
-│   ├── preprocessing.py
-│   ├── tweets_dataset.py
-│   ├── tweets_flux.py
-│   └── twitter_api.py
+|                                        
+├── SES classification                     <- Scripts for the SES classification: CamemBERT and LLMs (Llama and GPT)
+|
 ├── Figures                                <- Generated figures
+|
 ├── README.md
+|
 └── requirements.txt
 ```
 
