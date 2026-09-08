@@ -288,26 +288,6 @@ def add_features_polars(df, user_col: str):#: pl.LazyFrame | pl.DataFrame
 
     print('Done vocabulary size')
 
-    '''grouped_df = (
-        df.group_by(user_col)
-        .agg([
-            pl.col("tweet_words")
-            .flatten()
-            .unique()
-            .list.len()
-            .alias("vocabulary_size"),
-
-            pl.len().alias("num_tweets")
-        ])
-        .with_columns(
-            (
-                pl.col("vocabulary_size") /
-                pl.col("num_tweets")
-            ).alias("VOCAB_SIZE")
-        )
-        .select([user_col, "VOCAB_SIZE"])
-    )'''
-
     # join back
     df = df.join(grouped_df, on=user_col, how="left")
     
@@ -315,26 +295,6 @@ def add_features_polars(df, user_col: str):#: pl.LazyFrame | pl.DataFrame
 
 
     # 3) negation detection
-
-    '''df = df.with_columns(
-
-        pl.when(
-            pl.col("text")
-            .str.to_lowercase()
-            .str.contains(STANDARD_NEG_REGEX)
-        )
-        .then(pl.lit("standard"))
-
-        .when(
-            pl.col("text")
-            .str.to_lowercase()
-            .str.contains(NEG_ONLY_REGEX)
-        )
-        .then(pl.lit("non_standard"))
-
-        .otherwise(pl.lit("no_negation"))
-        .alias("negation_type")
-    )'''
 
     df = df.with_columns(
         pl.when(
