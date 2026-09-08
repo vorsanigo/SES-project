@@ -1,6 +1,9 @@
 # Socioeconomic status inference from online socialmedia text
 
-The aim of this work is to infer, through a classification task, the socioeconomic status (SES) of social media users from their text, not using any other additional metadata. We test two settings (2-class and 3-class setting) and two main strategies: a CamemBERT classifier and zero-shot classification with LLMs.
+The aim of this work is to infer, through a classification task, the socioeconomic status (SES) of social media users from their text, not using any other additional metadata. We test two settings, 2-class (*low* and *high*) and 3-class (*low*, *medium*, and *high*) setting, and two main strategies: a CamemBERT classifier and zero-shot classification with LLMs.
+We use the tweets text and some additional linguistic features: errors extracted with LanguageTool, tweet length, user vocabulary size, use of non-standard negation and non-standard pluralization.
+With CamemBERT, we use two different strategies to aggregate user's tweets: *a priori* and *a posteriori* user aggregation. In the first one, tweet embeddings and features are averaged and passed as a unique vector to the classifier for each user, obtaining already one SES label per user, while in the second one, each tweet embedding plus its feature vector is passed separately to the classifier and then the aggregation is done a posteriori on the predictedSES labels.
+With LLMs, with test three different prompts with increasing complexity
 
 
 ## Structure
