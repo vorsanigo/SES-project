@@ -37,6 +37,7 @@ With LLMs, we test three different prompts with increasing complexity
 ### Data preparation
 
 1) Home location inference
+    - Script `geo_located_home_inference.py`
 2) Text pre-processing, SES assignment, users sampling to create train, dev, and test sets
     - Script `prepare_data.py`
 3) Extraction of linguistic features
