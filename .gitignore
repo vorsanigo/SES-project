@@ -2,20 +2,16 @@ correlations/
 data statistics/
 dev_phase_normal/
 dev_phase_normal THIS SERVER/
-F1_score_dev_normal_post_ILE_DE_FRANCE/
-F1_score_dev_normal_post_ILE_DE_FRANCE_MASKED_LOC/
-F1_score_dev_normal_pre_avg_v2_3_classes_ILE_DE_FRANCE/
-F1_score_dev_normal_pre_avg_v2_3_classes_ILE_DE_FRANCE_MASKED_LOC/
-F1_score_dev_normal_pre_avg_v2_ILE_DE_FRANCE/
-F1_score_dev_normal_pre_avg_v2_ILE_DE_FRANCE_MASKED_LOC/
+
+
+predictions_*/
+F1_score_*/
+*.zip
+*.~lock.*
+
+
 llm_confusion_matrices/
 masked/
-predictions_post_ILE_DE_FRANCE/
-predictions_post_ILE_DE_FRANCE_MASKED_LOC/
-predictions_pre_avg_v2_3_classes_ILE_DE_FRANCE/
-predictions_pre_avg_v2_3_classes_ILE_DE_FRANCE_MASKED_LOC/
-predictions_pre_avg_v2_ILE_DE_FRANCE/
-predictions_pre_avg_v2_ILE_DE_FRANCE_MASKED_LOC/
 
 
 mean_results_tot_accuracy_priori.png
@@ -25,3 +21,7 @@ mean_results_tot_F1_score_priori_OLD.png
 
 
 .env
+
+
+anonymize_ids.py
+statistics.py
