@@ -27,7 +27,7 @@ With LLMs, we test three different prompts with increasing complexity
 ## Installation
 
 1) Clone the repository
-2) In the cloned folder, create a virtual environment through the command `conda env create -f environment.yml` and activate it through `conda activate ses_venv`
+2) In the cloned folder, create a virtual environment through the command `virtualenv ses_venv` and activate it through `source ses_venv/bin/activate`
 3) Inside the virtual environment, install the requirements through `pip install -r requirements.txt`
 4) To run the scripts inside the folder `SES classification`, a GPU is required (apart from the file *gpt_zero_shots.py*)
 
