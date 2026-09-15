@@ -66,5 +66,5 @@ With LLMs, we test three different prompts with increasing complexity
     - Script `confusion_grid.py` to compute confusion metric of LLMs results
     - Script `test_num_users.py` to compute and plot scores with different number of tweets per user at test time
     - Script `plot_maps.py` to plot maps of users coloured by their SES
-3) Vaidation on the system Ile-de-France communes
-- Script `ses_maps_corr_analysis.py`
+3) Vaidation of the system on Ile-de-France communes census data
+    - Script `ses_maps_corr_analysis.py`
