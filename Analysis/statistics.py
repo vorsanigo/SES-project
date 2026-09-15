@@ -532,7 +532,8 @@ for key in results_train.keys():
     )
 
 # separated plots
-
+print("Results for TRAIN set:")
+print(results_train)
 plot_correlations(results_train, target='ind_snv_mean',    feature_subset=error_rate_cols, type_feat='rate', type_df='train')
 plot_correlations(results_train, target='SES_users', feature_subset=error_rate_cols, type_feat='rate', type_df='train')
 plot_correlations(results_train, target='ind_snv_mean',    feature_subset=error_sum_cols, type_feat='sum', type_df='train')
@@ -545,7 +546,7 @@ plot_correlations(results_train, target='SES_users', feature_subset=other_featur
 
 # plots together
 
-plot_two_correlations(results_train, target='ind_snv_mean', subset_top=error_rate_cols, subset_bottom=other_features_cols, output_path='correlations/income_mean_train.pdf')
+plot_two_correlations(results_train, target='ind_snv_mean', subset_top=error_mean_cols, subset_bottom=other_features_cols, output_path='correlations/income_mean_train.pdf')
 
 
 # TRAIN + DEV + TEST
@@ -579,7 +580,7 @@ plot_correlations(results_tot, target='SES_users', feature_subset=other_features
 
 # plots together
 
-plot_two_correlations(results_tot, target='ind_snv_mean', subset_top=error_rate_cols, subset_bottom=other_features_cols, output_path='correlations/income_mean_train_dev_test.pdf')
+plot_two_correlations(results_tot, target='ind_snv_mean', subset_top=error_mean_cols, subset_bottom=other_features_cols, output_path='correlations/income_mean_train_dev_test.pdf')
 
 
 # or plot everything together
