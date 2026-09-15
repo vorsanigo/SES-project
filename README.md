@@ -34,7 +34,7 @@ With LLMs, we test three different prompts with increasing complexity
 
 ## Execution
 
-### Data preparation
+### Data preparation: `Data preparation` folder
 
 1) Home location inference
     - Script `geo_located_home_inference.py`
@@ -46,7 +46,7 @@ With LLMs, we test three different prompts with increasing complexity
 4) Build prompts for LLMs
     - Script `build_user_prompts.py`
 
-### SES classification
+### SES classification: `SES classification` folder
 
 1) Classification with CamemBERT
     - Script `normal_training_pooling_2_classes.py` to perform train and test with the *a priori* user aggregation strategy in the 2-class setting
@@ -57,7 +57,7 @@ With LLMs, we test three different prompts with increasing complexity
     - Script `llama_zero_shot.py` to perform zero-shot classification with Llama family models
     - Script `gpt_zero_shot.py` to perform zero-shot classification with GPT family models
 
-### Data and results analysis
+### Data and results analysis: `Analysis` folder
 
 1) Data analysis
     - Script `statistics.py` to compute and plot correlation between linguistic features and users income
@@ -66,3 +66,5 @@ With LLMs, we test three different prompts with increasing complexity
     - Script `confusion_grid.py` to compute confusion metric of LLMs results
     - Script `test_num_users.py` to compute and plot scores with different number of tweets per user at test time
     - Script `plot_maps.py` to plot maps of users coloured by their SES
+3) Vaidation on the system Ile-de-France communes
+- Script `ses_maps_corr_analysis.py`
